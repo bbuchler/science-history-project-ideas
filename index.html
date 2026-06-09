@@ -327,6 +327,12 @@
       gap: 15px;
     }
 
+    .lesson-section {
+      margin-top: 28px;
+      padding-top: 10px;
+      border-top: 4px solid var(--blue);
+    }
+
     .lesson-card {
       display: grid;
       grid-template-rows: auto 1fr;
@@ -355,6 +361,44 @@
       margin: 0;
       color: #40515a;
       font-size: 0.94rem;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fbfcfd;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 10px;
+      font-weight: 700;
+      color: #344650;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::before {
+      content: "+";
+      display: inline-grid;
+      place-items: center;
+      width: 20px;
+      height: 20px;
+      margin-right: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 0.8rem;
+    }
+
+    details[open] summary::before { content: "-"; }
+
+    .detail-body {
+      padding: 0 10px 10px;
+      display: grid;
+      gap: 10px;
     }
 
     .priority-box {
@@ -391,6 +435,22 @@
     }
 
     .note a { color: var(--blue); }
+
+    .section-toggle {
+      margin-top: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-toggle > summary {
+      background: #fff;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      padding: 13px 14px;
+    }
+
+    .section-toggle > .section-content {
+      padding: 0 0 4px;
+    }
 
     @media (max-width: 980px) {
       .top-inner,
@@ -431,11 +491,11 @@
         <p class="subtitle">Cross-curricular lesson ideas for tutoring sessions / AUs.</p>
       </div>
       <nav aria-label="Page sections">
-        <a class="primary" href="#lessons">Lessons</a>
         <a href="#standards">Anchor Standards</a>
         <a href="#flow">Lesson Flow</a>
+        <a class="primary" href="#lessons">Lesson Ideas</a>
         <a href="#bank">Ideas by Grade</a>
-        <a href="#setup">Lesson Structure</a>
+        <a href="#setup">Webpage Features</a>
       </nav>
     </div>
   </header>
@@ -460,7 +520,9 @@
       </div>
     </section>
 
-    <section id="outcomes">
+    <details id="outcomes" class="section-toggle" open>
+      <summary>Suggested Approach</summary>
+      <div class="section-content">
       <div class="section-head">
         <h2>Suggested Approach</h2>
         <p>A simple way to move forward without overbuilding the idea too early.</p>
@@ -470,26 +532,55 @@
         <div class="outcome-card"><h3>Use One Format</h3><p>If we build them with the same lesson structure, teachers only have to learn the routine once, even if the topics change.</p></div>
         <div class="outcome-card"><h3>Keep Standards Visible</h3><p>The goal is still state-test reading practice: evidence, central idea, source integration, claim evaluation, and short evidence writing.</p></div>
       </div>
-    </section>
+      </div>
+    </details>
 
-    <section id="standards">
+    <details id="standards" class="section-toggle" open>
+      <summary>Anchor Standards For Tutoring Sessions</summary>
+      <div class="section-content">
       <div class="section-head">
         <h2>Anchor Standards For Tutoring Sessions</h2>
         <p>These are the highest-value reading and writing standards to build around because they overlap across ELA, history/social science, and science/technical reading.</p>
       </div>
-      <div class="standard-grid">
-        <div class="standard-card"><h3>RI/RH/RST-1</h3><p>Cite evidence from text, sources, and technical explanations. This is the anchor skill.</p></div>
-        <div class="standard-card"><h3>RI/RH/RST-2</h3><p>Find central ideas and summarize processes, events, or conclusions accurately.</p></div>
-        <div class="standard-card"><h3>RI/RH/RST-3</h3><p>Track cause/effect, sequence, explanations, procedures, or interactions among ideas.</p></div>
-        <div class="standard-card"><h3>RI/RH/RST-7</h3><p>Integrate text with maps, images, charts, video, data, diagrams, or simulations.</p></div>
-        <div class="standard-card"><h3>RH/RST-8</h3><p>Evaluate claims, evidence, data, conclusions, and whether another source confirms or challenges them.</p></div>
-        <div class="standard-card"><h3>RH/RST-9</h3><p>Synthesize multiple sources into one coherent understanding of an event, problem, or phenomenon.</p></div>
-        <div class="standard-card"><h3>Claim 2</h3><p>End with a short CER, policy note, exhibit label, or evidence-based paragraph.</p></div>
-        <div class="standard-card"><h3>CAST Link</h3><p>Use life, Earth/space, physical science, engineering, data, models, systems, and human impact topics.</p></div>
+      <details open>
+        <summary>Show / hide anchor standards</summary>
+        <div class="detail-body">
+          <div class="standard-grid">
+            <div class="standard-card"><h3>RI/RH/RST-1</h3><p>Cite evidence from text, sources, and technical explanations. This is the anchor skill.</p></div>
+            <div class="standard-card"><h3>RI/RH/RST-2</h3><p>Find central ideas and summarize processes, events, or conclusions accurately.</p></div>
+            <div class="standard-card"><h3>RI/RH/RST-3</h3><p>Track cause/effect, sequence, explanations, procedures, or interactions among ideas.</p></div>
+            <div class="standard-card"><h3>RI/RH/RST-7</h3><p>Integrate text with maps, images, charts, video, data, diagrams, or simulations.</p></div>
+            <div class="standard-card"><h3>RH/RST-8</h3><p>Evaluate claims, evidence, data, conclusions, and whether another source confirms or challenges them.</p></div>
+            <div class="standard-card"><h3>RH/RST-9</h3><p>Synthesize multiple sources into one coherent understanding of an event, problem, or phenomenon.</p></div>
+            <div class="standard-card"><h3>Claim 2</h3><p>End with a short claim-evidence-reasoning response, policy note, exhibit label, or evidence-based paragraph.</p></div>
+            <div class="standard-card"><h3>CAST Link</h3><p>Use life, Earth/space, physical science, engineering, data, models, systems, and human impact topics.</p></div>
+          </div>
+        </div>
+      </details>
       </div>
-    </section>
+    </details>
 
-    <section id="lessons">
+    <details id="flow" class="section-toggle" open>
+      <summary>Reusable One-Hour Flow</summary>
+      <div class="section-content">
+      <div class="section-head">
+        <h2>Reusable One-Hour Flow</h2>
+        <p>This keeps every lesson familiar enough for tutoring or small-group intervention.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-row"><strong>5 min hook</strong><span>Start with the weird story, image, short clip, or impossible-sounding question. Then preview only the vocabulary students need to unlock the source set.</span></div>
+        <div class="flow-row"><strong>10 min source 1</strong><span>History/social science source: central idea and evidence check.</span></div>
+        <div class="flow-row"><strong>10 min source 2</strong><span>Science/technical source: process, model, data, or explanation check.</span></div>
+        <div class="flow-row"><strong>10 min media</strong><span>Short video, slideshow, infographic, map, graph, diagram, or simulation that students can inspect.</span></div>
+        <div class="flow-row"><strong>15 min activity</strong><span>Hands-on or clickable task: build a timeline, sort evidence, annotate a graph, design a solution, compare sources, or complete a gallery walk.</span></div>
+        <div class="flow-row"><strong>10 min check</strong><span>Mostly self-graded formative check, followed by a short claim-evidence-reasoning response in plain student language.</span></div>
+      </div>
+      </div>
+    </details>
+
+    <details id="lessons" class="section-toggle lesson-section" open>
+      <summary>One-Hour Lesson Ideas</summary>
+      <div class="section-content">
       <div class="section-head">
         <h2>One-Hour Lesson Ideas</h2>
         <p>Click a lesson for a quick walkthrough. The detailed cards show sources, checks, standards, and CAST connections.</p>
@@ -497,24 +588,12 @@
       <div class="lesson-tabs" id="lessonTabs" aria-label="Choose a lesson"></div>
       <article class="lesson-focus" id="lessonFocus"></article>
       <div class="lesson-grid" id="lessonGrid"></div>
-    </section>
-
-    <section id="flow">
-      <div class="section-head">
-        <h2>Reusable One-Hour Flow</h2>
-        <p>This keeps every lesson familiar enough for tutoring or small-group intervention.</p>
       </div>
-      <div class="flow">
-        <div class="flow-row"><strong>5 min launch</strong><span>Image, quick question, and vocabulary preview.</span></div>
-        <div class="flow-row"><strong>10 min source 1</strong><span>History/social science source: central idea and evidence check.</span></div>
-        <div class="flow-row"><strong>10 min source 2</strong><span>Science/technical source: process, model, data, or explanation check.</span></div>
-        <div class="flow-row"><strong>10 min media</strong><span>Short video, slideshow, infographic, map, graph, diagram, or simulation that students can inspect.</span></div>
-        <div class="flow-row"><strong>15 min activity</strong><span>Hands-on or clickable task: build a timeline, sort evidence, annotate a graph, design a solution, compare sources, or complete a gallery walk.</span></div>
-        <div class="flow-row"><strong>10 min check</strong><span>Mostly self-graded formative check, followed by a short claim-evidence-reasoning response in plain student language.</span></div>
-      </div>
-    </section>
+    </details>
 
-    <section id="bank">
+    <details id="bank" class="section-toggle">
+      <summary>Ideas By Grade Level</summary>
+      <div class="section-content">
       <div class="section-head">
         <h2>Ideas By Grade Level</h2>
         <p>These are the likely best fits if we want maximum standards overlap and minimum course disruption.</p>
@@ -525,12 +604,15 @@
         <div class="model-card"><h3>Grade 8</h3><p>Columbian Exchange; earthquake-safe cities; California water; Dust Bowl; energy revolutions; AI and work. Best for US history + CAST-style science reasoning.</p></div>
         <div class="model-card"><h3>Grade 11</h3><p>Use one advanced model only if needed: satellites, Cold War science, climate data, public decision-making, and corroborating evidence across complex sources.</p></div>
       </div>
-    </section>
+      </div>
+    </details>
 
-    <section id="setup">
+    <details id="setup" class="section-toggle">
+      <summary>Webpage Features</summary>
+      <div class="section-content">
       <div class="section-head">
-        <h2>Lesson Structure</h2>
-        <p>Each topic could become a single webpage linked in Canvas, similar in spirit to your course pages but built for tutoring.</p>
+        <h2>Webpage Features</h2>
+        <p>Each topic could become a student-facing webpage plus a teacher-facing guide linked in Canvas.</p>
       </div>
       <div class="model-grid">
         <div class="model-card"><h3>Teacher-Facing Guide</h3><p>A clean follow-along page with timing, discussion prompts, standards focus, answer key, and where to pause for small-group talk.</p></div>
@@ -541,7 +623,8 @@
       <div class="note">
         Planning note: exact standards should be finalized after a lesson is selected. Useful official references include <a href="https://www.cde.ca.gov/ci/pl/ngssstandards.asp">California NGSS</a>, <a href="https://www.cde.ca.gov/ta/tg/ca/caasppscience.asp">CAST information</a>, and <a href="https://www.cde.ca.gov/re/cc/elaresources.asp">California ELA/Literacy resources</a>.
       </div>
-    </section>
+      </div>
+    </details>
   </main>
 
   <script>
@@ -767,13 +850,18 @@
             <div class="tags">${tags(lesson.grade, "grade")}${tags(lesson.science, "science")}</div>
           </div>
           <p class="pitch"><strong>Driving question:</strong> ${lesson.question}</p>
-          <div class="two-col">
-            <div class="mini"><strong>Source set</strong>${list(lesson.sources)}</div>
-            <div class="mini"><strong>Self-graded checks</strong>${list(lesson.checks)}</div>
-          </div>
-          <div class="mini priority-box"><strong>Priority ELA move</strong><p>${lesson.priority}</p></div>
-          <div class="mini"><strong>Student product</strong><p>${lesson.product}</p></div>
-          <div class="tags">${tags(lesson.standards, "standard")}</div>
+          <details open>
+            <summary>Lesson details</summary>
+            <div class="detail-body">
+              <div class="two-col">
+                <div class="mini"><strong>Source set</strong>${list(lesson.sources)}</div>
+                <div class="mini"><strong>Self-graded checks</strong>${list(lesson.checks)}</div>
+              </div>
+              <div class="mini priority-box"><strong>Priority ELA move</strong><p>${lesson.priority}</p></div>
+              <div class="mini"><strong>Student product</strong><p>${lesson.product}</p></div>
+              <div class="tags">${tags(lesson.standards, "standard")}</div>
+            </div>
+          </details>
         </div>
       `;
       [...tabs.children].forEach((button, i) => button.classList.toggle("active", i === index));
@@ -800,13 +888,18 @@
             </div>
             <p>${lesson.short}</p>
             <div class="mini"><strong>Driving question</strong><p>${lesson.question}</p></div>
-            <div class="two-col">
-              <div class="mini"><strong>Source set</strong>${list(lesson.sources)}</div>
-              <div class="mini"><strong>Checks</strong>${list(lesson.checks)}</div>
-            </div>
-            <div class="mini priority-box"><strong>Priority ELA move</strong><p>${lesson.priority}</p></div>
-            <div class="mini"><strong>Student product</strong><p>${lesson.product}</p></div>
-            <div class="tags">${tags(lesson.standards, "standard")}</div>
+            <details>
+              <summary>Sources, checks, standards</summary>
+              <div class="detail-body">
+                <div class="two-col">
+                  <div class="mini"><strong>Source set</strong>${list(lesson.sources)}</div>
+                  <div class="mini"><strong>Checks</strong>${list(lesson.checks)}</div>
+                </div>
+                <div class="mini priority-box"><strong>Priority ELA move</strong><p>${lesson.priority}</p></div>
+                <div class="mini"><strong>Student product</strong><p>${lesson.product}</p></div>
+                <div class="tags">${tags(lesson.standards, "standard")}</div>
+              </div>
+            </details>
           </div>
         `;
         grid.appendChild(card);
