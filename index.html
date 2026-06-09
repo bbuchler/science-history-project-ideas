@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Science + History Project Module Ideas</title>
+  <title>Science + History Project Ideas</title>
   <style>
     :root {
       --ink: #26343c;
@@ -14,9 +14,8 @@
       --blue: #0071ce;
       --gold: #f3cf45;
       --green: #2f8f70;
-      --violet: #725aa6;
       --coral: #c9624d;
-      --slate: #344650;
+      --violet: #725aa6;
       --shadow: 0 12px 28px rgba(38, 52, 60, 0.1);
     }
 
@@ -26,9 +25,9 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
       background: var(--paper);
       color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.45;
     }
 
@@ -38,7 +37,7 @@
       height: auto;
     }
 
-    button, input, select { font: inherit; }
+    button { font: inherit; }
 
     .top {
       border-top: 8px solid var(--gold);
@@ -50,26 +49,26 @@
     }
 
     .top-inner {
-      max-width: 1220px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 14px 18px;
+      padding: 13px 18px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
       gap: 16px;
+      align-items: center;
     }
 
     h1, h2, h3 { letter-spacing: 0; }
 
     h1 {
       margin: 0;
-      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-size: clamp(1.2rem, 2.4vw, 1.6rem);
     }
 
     .subtitle {
-      margin: 3px 0 0;
+      margin: 2px 0 0;
       color: var(--muted);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
     }
 
     nav {
@@ -80,11 +79,11 @@
     }
 
     nav a {
-      text-decoration: none;
       color: var(--ink);
+      text-decoration: none;
       border: 1px solid var(--line);
-      background: #fff;
       border-radius: 6px;
+      background: #fff;
       padding: 8px 10px;
       min-height: 38px;
       display: inline-flex;
@@ -98,20 +97,25 @@
     }
 
     main {
-      max-width: 1220px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 22px 18px 46px;
     }
 
-    .hero {
+    .intro {
       display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+      grid-template-columns: minmax(0, 0.95fr) minmax(330px, 1.05fr);
       gap: 18px;
       align-items: stretch;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    .hero-panel {
+    .intro-copy,
+    .intro-image,
+    .panel,
+    .idea-focus,
+    .idea-card,
+    .model-card {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 8px;
@@ -119,89 +123,60 @@
       overflow: hidden;
     }
 
-    .hero-copy {
+    .intro-copy {
       padding: 22px;
       display: grid;
-      gap: 16px;
       align-content: center;
+      gap: 14px;
     }
 
-    .hero-copy h2 {
+    .intro-copy h2 {
       margin: 0;
-      font-size: clamp(1.45rem, 3vw, 2.35rem);
+      font-size: clamp(1.5rem, 3vw, 2.35rem);
       line-height: 1.12;
     }
 
-    .hero-copy p {
+    .intro-copy p {
       margin: 0;
       color: var(--muted);
-      font-size: 1.02rem;
+      font-size: 1.03rem;
     }
 
-    .talking-points {
+    .intro-list {
       display: grid;
-      gap: 10px;
+      gap: 8px;
     }
 
-    .point {
+    .intro-item {
       display: grid;
-      grid-template-columns: 34px 1fr;
+      grid-template-columns: 30px 1fr;
       gap: 10px;
-      align-items: start;
       padding: 10px;
-      background: #f8fafb;
       border: 1px solid var(--line);
       border-radius: 7px;
+      background: #fbfcfd;
     }
 
-    .num {
-      width: 28px;
-      height: 28px;
+    .dot {
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       display: grid;
       place-items: center;
       background: var(--blue);
       color: #fff;
       font-weight: 700;
+      font-size: 0.86rem;
     }
 
-    .hero-image {
-      min-height: 420px;
+    .intro-image img {
       height: 100%;
+      min-height: 390px;
       object-fit: cover;
     }
 
-    .meeting-strip {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr 0.9fr;
-      gap: 12px;
-      margin: 0 0 18px;
-    }
-
-    .strip-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 14px;
-    }
-
-    .strip-card strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--blue);
-    }
-
-    .strip-card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
     .section-head {
-      margin: 26px 0 12px;
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 14px;
+      margin: 24px 0 12px;
     }
 
     .section-head h2 {
@@ -214,45 +189,57 @@
       color: var(--muted);
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 15px;
+    .idea-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
     }
 
-    .card {
-      background: #fff;
+    .idea-tab {
       border: 1px solid var(--line);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(38, 52, 60, 0.06);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 11px;
+      min-height: 38px;
+      cursor: pointer;
+    }
+
+    .idea-tab.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .idea-focus {
       display: grid;
-      grid-template-rows: auto 1fr;
+      grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
+      min-height: 420px;
     }
 
-    .card.hidden { display: none; }
-
-    .thumb {
-      aspect-ratio: 16 / 9;
+    .idea-focus img {
+      height: 100%;
       object-fit: cover;
-      border-bottom: 1px solid var(--line);
-      background: #e9eef1;
     }
 
-    .card-body {
-      padding: 15px;
+    .focus-body {
+      padding: 18px;
       display: grid;
       gap: 12px;
+      align-content: center;
     }
 
-    .card h3 {
+    .focus-body h3 {
       margin: 0;
-      font-size: 1.15rem;
+      font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+      line-height: 1.15;
     }
 
     .pitch {
       margin: 0;
       color: #40515a;
+      font-size: 1rem;
     }
 
     .tags {
@@ -278,30 +265,10 @@
     .tag.science { color: #236d56; border-color: rgba(47, 143, 112, 0.35); }
     .tag.skill { color: #005ea8; border-color: rgba(0, 113, 206, 0.35); }
 
-    .module-map {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .module-step {
-      min-height: 104px;
-      border: 1px solid var(--line);
-      background: #fbfcfd;
-      border-radius: 7px;
-      padding: 10px;
-    }
-
-    .module-step strong {
-      display: block;
-      margin-bottom: 4px;
-      color: #344650;
-    }
-
-    .pairing {
+    .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      gap: 10px;
     }
 
     .mini {
@@ -314,57 +281,77 @@
     .mini strong {
       display: block;
       margin-bottom: 5px;
-      font-size: 0.86rem;
-      color: var(--slate);
+      color: #344650;
+      font-size: 0.88rem;
+    }
+
+    .mini p,
+    .mini ul {
+      margin: 0;
+      color: #40515a;
     }
 
     .mini ul {
-      margin: 0;
       padding-left: 18px;
     }
 
-    .mini li { margin: 3px 0; }
+    .mini li {
+      margin: 3px 0;
+    }
 
-    .side-by-side {
+    .idea-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
     }
 
-    .side-card {
-      border: 1px solid var(--line);
-      border-radius: 7px;
-      padding: 10px;
-      background: #fbfcfd;
+    .idea-card {
+      box-shadow: 0 8px 18px rgba(38, 52, 60, 0.06);
+      cursor: pointer;
+      text-align: left;
+      padding: 0;
     }
 
-    .side-card b {
-      display: block;
-      color: var(--slate);
-      margin-bottom: 4px;
-      font-size: 0.86rem;
+    .idea-card img {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line);
     }
 
-    .matrix {
+    .idea-card-body {
+      padding: 12px;
+    }
+
+    .idea-card h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+    }
+
+    .idea-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .model-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
     }
 
-    .matrix-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 14px;
-      min-height: 170px;
+    .model-card {
+      padding: 15px;
+      min-height: 160px;
+      box-shadow: 0 8px 18px rgba(38, 52, 60, 0.06);
     }
 
-    .matrix-card h3 {
+    .model-card h3 {
       margin: 0 0 8px;
       font-size: 1rem;
     }
 
-    .matrix-card p {
+    .model-card p {
       margin: 0;
       color: var(--muted);
     }
@@ -385,31 +372,30 @@
     }
 
     .shell-row:last-child { border-bottom: 0; }
-
     .shell-row strong { color: var(--blue); }
 
-    .source-note {
-      margin-top: 18px;
-      padding: 12px 14px;
+    .note {
+      margin-top: 16px;
       border: 1px solid var(--line);
       background: #fff;
       border-radius: 8px;
+      padding: 12px 14px;
       color: var(--muted);
       font-size: 0.92rem;
     }
 
-    .source-note a { color: var(--blue); }
+    .note a { color: var(--blue); }
 
     @media (max-width: 980px) {
-      .hero, .grid, .matrix, .meeting-strip {
+      .top-inner,
+      .intro,
+      .idea-focus,
+      .model-grid,
+      .idea-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-image {
-        min-height: auto;
-      }
-
-      .top-inner, .section-head {
+      .top-inner {
         align-items: start;
         flex-direction: column;
       }
@@ -417,12 +403,23 @@
       nav {
         justify-content: start;
       }
+
+      .intro-image img,
+      .idea-focus img {
+        min-height: auto;
+      }
     }
 
     @media (max-width: 680px) {
       main { padding-inline: 12px; }
-      .module-map, .pairing, .shell-row, .side-by-side { grid-template-columns: 1fr; }
-      .hero-copy { padding: 16px; }
+      .two-col,
+      .shell-row {
+        grid-template-columns: 1fr;
+      }
+      .intro-copy,
+      .focus-body {
+        padding: 16px;
+      }
     }
   </style>
 </head>
@@ -430,163 +427,114 @@
   <header class="top">
     <div class="top-inner">
       <div>
-        <h1>Science + History Project Module Ideas</h1>
-        <p class="subtitle">Brainstorming board for APAC chairs, science, and social studies.</p>
+        <h1>Science + History Project Ideas</h1>
+        <p class="subtitle">A quick discussion board for cross-curricular planning.</p>
       </div>
       <nav aria-label="Page sections">
         <a class="primary" href="#ideas">Ideas</a>
-        <a href="#models">Models</a>
-        <a href="#pairings">Course Fits</a>
-        <a href="#shell">Module Shape</a>
-        <a href="#standards">Standards</a>
+        <a href="#setup">Setup</a>
+        <a href="#fit">Course Fits</a>
+        <a href="#standards">Why It Works</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-panel hero-copy">
+    <section class="intro">
+      <div class="intro-copy">
         <div>
-          <h2>Use science as the evidence, and history as the consequence.</h2>
-          <p>These are not finished Canvas modules. They are meeting-ready concepts for short project modules that could live in a history course, a science course, or both as paired lessons.</p>
+          <h2>Here are some ideas we could build from.</h2>
+          <p>The goal is not to create one giant interdisciplinary project. It is to identify small project modules where science, technology, and history naturally explain each other.</p>
         </div>
-        <div class="talking-points">
-          <div class="point"><span class="num">1</span><span><strong>Keep the structure familiar.</strong> Launch question, short source set, data or model, student product, reflection.</span></div>
-          <div class="point"><span class="num">2</span><span><strong>Do not force perfect pacing.</strong> Some ideas work inside one history module; others work best as paired science/history lessons.</span></div>
-          <div class="point"><span class="num">3</span><span><strong>Use it for SBA literacy practice.</strong> Students compare sources, interpret visuals/data, and explain a claim with evidence.</span></div>
-        </div>
-      </div>
-      <div class="hero-panel">
-        <img class="hero-image" src="assets/web/overview-contact-sheet.jpg" alt="Generated overview collage of science and history project ideas">
-      </div>
-    </section>
-
-    <section class="meeting-strip" aria-label="Meeting framing">
-      <div class="strip-card">
-        <strong>What I would say first</strong>
-        <p>We do not need one giant interdisciplinary project. We can build a small menu of project modules where science explains the mechanism and history explains the human change.</p>
-      </div>
-      <div class="strip-card">
-        <strong>How to organize it</strong>
-        <p>Use course-embedded projects as the default, then build paired lessons where science and history naturally meet at the same grade band.</p>
-      </div>
-      <div class="strip-card">
-        <strong>Why it fits SBA literacy</strong>
-        <p>Every idea asks students to read sources, interpret visuals or data, compare perspectives, and explain a claim with evidence.</p>
-      </div>
-    </section>
-
-    <section id="models">
-      <div class="section-head">
-        <div>
-          <h2>Three Ways To Organize This</h2>
-          <p>The meeting does not have to choose only one model, but this gives people a shared vocabulary.</p>
+        <div class="intro-list">
+          <div class="intro-item"><span class="dot">1</span><span><strong>Start with the ideas.</strong> Which topics feel useful enough to pilot?</span></div>
+          <div class="intro-item"><span class="dot">2</span><span><strong>Then choose the structure.</strong> Does it live in one course, two paired courses, or a shared project bank?</span></div>
+          <div class="intro-item"><span class="dot">3</span><span><strong>Keep the literacy priority visible.</strong> Students read sources, interpret visuals/data, and explain claims with evidence.</span></div>
         </div>
       </div>
-      <div class="matrix">
-        <div class="matrix-card">
-          <h3>1. Embedded History Module</h3>
-          <p><strong>Default recommendation.</strong> A history course includes one science/technology project where it naturally fits. This is easiest to schedule and still supports literacy goals.</p>
-        </div>
-        <div class="matrix-card">
-          <h3>2. Paired Course Moment</h3>
-          <p>Two courses touch the same topic at the same grade band. Science teaches the mechanism; history teaches the consequence. Best when pacing already lines up.</p>
-        </div>
-        <div class="matrix-card">
-          <h3>3. Cross-Course Project Bank</h3>
-          <p>A small library of “science changed society” modules that different courses can borrow when useful. This works when the topic is strong but not tied to one exact unit.</p>
-        </div>
+      <div class="intro-image">
+        <img src="assets/web/overview-contact-sheet.jpg" alt="Generated overview collage of science and history project ideas">
       </div>
     </section>
 
     <section id="ideas">
       <div class="section-head">
-        <div>
-          <h2>Project Module Ideas</h2>
-          <p><span id="countLabel">11 ideas</span>. Each one can be a standalone history project, a science extension, or a paired science/history lesson.</p>
-        </div>
+        <h2>Idea Quick View</h2>
+        <p>Click an idea to switch the focus card. The small cards underneath are the quick menu.</p>
       </div>
-      <div class="grid" id="ideaGrid"></div>
+      <div class="idea-tabs" id="ideaTabs" aria-label="Choose an idea"></div>
+      <article class="idea-focus" id="ideaFocus"></article>
+      <div class="idea-grid" id="ideaGrid"></div>
     </section>
 
-    <section id="pairings">
+    <section id="setup">
       <div class="section-head">
-        <div>
-          <h2>Course Pairings To Pitch</h2>
-          <p>These are not assignments yet. They are ways to ask, “Does this live in one course, two paired courses, or the shared project bank?”</p>
-        </div>
+        <h2>How We Could Set It Up</h2>
+        <p>This is the decision for the meeting: where do these projects live?</p>
       </div>
-      <div class="matrix">
-        <div class="matrix-card">
-          <h3>Grade 6 Ancient Civilizations + Science</h3>
-          <p><strong>Best fit:</strong> rivers and irrigation, ancient engineering, calendars/astronomy, agriculture, archaeology, materials, and disease. These can sit inside ancient Egypt, Mesopotamia, India, China, Greece, or Rome units.</p>
+      <div class="model-grid">
+        <div class="model-card">
+          <h3>1. Embedded Module</h3>
+          <p><strong>My recommendation.</strong> Put one science/technology project inside a history module where it naturally fits. This is easiest to schedule and still supports SBA literacy.</p>
         </div>
-        <div class="matrix-card">
-          <h3>Grade 7 Medieval/Early Modern + Science</h3>
-          <p><strong>Best fit:</strong> plague and trade routes, Islamic Golden Age science, navigation, mapmaking, printing, Renaissance anatomy, and Scientific Revolution evidence.</p>
+        <div class="model-card">
+          <h3>2. Paired Course Moment</h3>
+          <p>Two courses hit the same topic around the same time. Science teaches the mechanism; history teaches the human consequence.</p>
         </div>
-        <div class="matrix-card">
-          <h3>Grade 8 US History + Physical/Earth Science</h3>
-          <p><strong>Best fit:</strong> industrialization, new technologies, water in the West, earthquakes and city planning. This lines up especially well with US History 8-2 modules on Industry, New Technologies, Immigration/Urbanization, and Progressive Era reform.</p>
-        </div>
-        <div class="matrix-card">
-          <h3>World History + Biology/Chemistry</h3>
-          <p><strong>Best fit:</strong> disease, food systems, population growth, trade, industrialization, chemistry, and public health. History handles movement and power; science explains mechanisms.</p>
-        </div>
-        <div class="matrix-card">
-          <h3>US History HS + Chemistry/Environmental Science</h3>
-          <p><strong>Best fit:</strong> fertilizer, atomic age, fossil fuels, satellites, climate, and technology policy. This works for industrialization, Cold War, postwar America, energy policy, and current events.</p>
-        </div>
-        <div class="matrix-card">
-          <h3>Government/Economics + Science</h3>
-          <p><strong>Best fit:</strong> water policy, AI automation, public health rules, energy tradeoffs, and environmental regulation. Students can evaluate evidence, stakeholders, incentives, and policy consequences.</p>
+        <div class="model-card">
+          <h3>3. Project Bank</h3>
+          <p>Build a small library of science-history modules that any course can borrow when useful, even if pacing does not line up perfectly.</p>
         </div>
       </div>
     </section>
 
-    <section id="shell">
+    <section id="fit">
       <div class="section-head">
-        <div>
-          <h2>Project Module Shape</h2>
-          <p>This mirrors your history course organization, but leaves room for science labs, models, and data tasks.</p>
-        </div>
+        <h2>Where These Could Fit</h2>
+        <p>These are planning-level fits, not final curriculum placements.</p>
       </div>
-      <div class="shell">
-        <div class="shell-row"><strong>Launch</strong><span>One question with a vivid image: How did this scientific idea or technology change ordinary life?</span></div>
-        <div class="shell-row"><strong>History Lens</strong><span>Short source set: textbook excerpt, primary source, map, photo, timeline, or stakeholder account.</span></div>
-        <div class="shell-row"><strong>Science Lens</strong><span>Mechanism: diagram, model, simulation, lab demo, data set, or short explainer video.</span></div>
-        <div class="shell-row"><strong>Bridge Task</strong><span>Students connect the mechanism to the consequence: cause/effect chain, comparison, decision matrix, or claim-evidence-reasoning.</span></div>
-        <div class="shell-row"><strong>Product</strong><span>Mini poster, one-page brief, policy memo, historical exhibit panel, debate prep, infographic, or short recorded explanation.</span></div>
-        <div class="shell-row"><strong>Reflection</strong><span>Students answer: what changed, who benefited, who paid a cost, and what parallel exists today?</span></div>
+      <div class="model-grid">
+        <div class="model-card">
+          <h3>Grade 6 Ancient Civilizations</h3>
+          <p>Rivers and irrigation, materials, ancient engineering, calendars, astronomy, agriculture, archaeology, medicine, and city building.</p>
+        </div>
+        <div class="model-card">
+          <h3>Grade 7 Medieval/Early Modern</h3>
+          <p>Trade routes and disease, Islamic Golden Age science, navigation, printing, Renaissance anatomy, and the Scientific Revolution.</p>
+        </div>
+        <div class="model-card">
+          <h3>Grade 8 US History</h3>
+          <p>Exploration and exchange, westward expansion, California water, industrialization, urbanization, new technologies, and reform.</p>
+        </div>
+        <div class="model-card">
+          <h3>World History</h3>
+          <p>Population, disease, agriculture, industrial revolutions, imperialism, energy, global trade, war technology, and environmental change.</p>
+        </div>
+        <div class="model-card">
+          <h3>US History HS</h3>
+          <p>Industrialization, Progressive reform, Cold War science, atomic age, space race, environmental policy, computing, and automation.</p>
+        </div>
+        <div class="model-card">
+          <h3>Science Courses</h3>
+          <p>Biology, chemistry, Earth science, physical science, environmental science, and engineering design can each supply the mechanism side.</p>
+        </div>
       </div>
     </section>
 
     <section id="standards">
       <div class="section-head">
-        <div>
-          <h2>Likely Standards Story</h2>
-          <p>Planning-level alignment only. Exact standards should be finalized once the actual course and lesson are chosen.</p>
-        </div>
+        <h2>Why It Works</h2>
+        <p>The standards argument is simple: the content changes, but the literacy routine stays stable.</p>
       </div>
-      <div class="matrix">
-        <div class="matrix-card">
-          <h3>History/Social Science</h3>
-          <p>Use the content standard from the course topic. Grade 6 can anchor ancient civilizations; grade 7 can anchor medieval and early modern world history; grade 8 and high school can handle industrialization, reform, technology, and policy.</p>
-        </div>
-        <div class="matrix-card">
-          <h3>Literacy Priority</h3>
-          <p>Strong recurring fit: RH/RST source evidence, central idea, visual/data integration, comparison, argument evaluation, and WHST explanatory or argument writing.</p>
-        </div>
-        <div class="matrix-card">
-          <h3>Science</h3>
-          <p>Use CA NGSS by course: Life Science for disease/ecosystems, Physical Science for energy/chemistry, Earth and Space Science for water/satellites/earthquakes, and Engineering Design for solutions and tradeoffs.</p>
-        </div>
+      <div class="shell">
+        <div class="shell-row"><strong>Launch</strong><span>Start with a vivid historical/scientific problem students can actually discuss.</span></div>
+        <div class="shell-row"><strong>Source Set</strong><span>Use one history source, one visual/data source, and one short science explanation.</span></div>
+        <div class="shell-row"><strong>Bridge Task</strong><span>Students connect mechanism to consequence: how did this science or technology change society?</span></div>
+        <div class="shell-row"><strong>Product</strong><span>Mini exhibit, policy memo, decision board, claim-evidence-reasoning response, or short presentation.</span></div>
+        <div class="shell-row"><strong>Literacy Fit</strong><span>Source evidence, central idea, visual/data integration, comparison, argument, and explanatory writing.</span></div>
       </div>
-      <div class="source-note">
-        Standards references used for planning checks: 
-        <a href="https://www.cde.ca.gov/ci/pl/ngssstandards.asp">CDE NGSS for California</a>,
-        <a href="https://www2.cde.ca.gov/cacs/history">CDE History-Social Science Standards</a>,
-        and <a href="https://www.cde.ca.gov/re/cc/elaresources.asp">CDE Common Core ELA/Literacy resources</a>.
+      <div class="note">
+        Planning references: California grade 6 covers ancient civilizations, grade 7 covers medieval and early modern world history, and science alignment can come from CA NGSS life science, physical science, Earth/space science, and engineering design. Exact standards should be finalized after choosing the course and module.
       </div>
     </section>
   </main>
@@ -595,203 +543,187 @@
     const ideas = [
       {
         title: "Ancient Water, Cities, and Engineering",
+        short: "Rivers, irrigation, farming, and early cities.",
         image: "assets/web/california-water.jpg",
         pitch: "Use river civilizations to ask how geography, irrigation, engineering, and political power grew together.",
         historySide: "Mesopotamia, Egypt, Indus Valley, China, city-states, agriculture, labor, and state power.",
         scienceSide: "Watersheds, flooding, irrigation, soil, sediment, simple machines, and engineering constraints.",
         pairedLesson: "History asks how rivers helped civilizations grow. Science asks what water systems make farming and dense cities possible.",
-        history: ["Grade 6 Ancient Civilizations", "World History"],
-        science: ["Earth Science", "Environmental Science", "Engineering/Technology"],
-        modules: ["Grade 6: Mesopotamia and Egypt", "Grade 6: Ancient India and China", "Earth Science: Water and Landforms"],
-        product: "Design brief for an ancient irrigation system with a short historical explanation.",
-        standards: ["ancient civilizations", "ESS water systems", "engineering design", "RH/RST visual evidence"]
+        courses: ["Grade 6 Ancient Civilizations", "Earth Science", "Engineering Design"],
+        product: "Design brief for an ancient irrigation system with a short historical explanation."
       },
       {
         title: "Materials That Built Empires",
+        short: "Bronze, iron, concrete, roads, paper, and tools.",
         image: "assets/web/energy-revolutions.jpg",
         pitch: "Bronze, iron, concrete, glass, paper, and roads can become a science/history project about why materials change what societies can build.",
         historySide: "Ancient and classical empires, trade, warfare, architecture, infrastructure, and specialization.",
         scienceSide: "Properties of materials, mixtures, metals, heat, strength, durability, and technological design.",
         pairedLesson: "History asks what materials allowed societies to do. Science asks why those materials behaved differently from what came before.",
-        history: ["Grade 6 Ancient Civilizations", "Grade 7 Medieval/Early Modern", "World History"],
-        science: ["Physical Science", "Chemistry", "Engineering/Technology"],
-        modules: ["Grade 6: Rome, Greece, China", "Grade 7: Silk Road and Early Modern Trade", "Physical Science: Materials and Properties"],
-        product: "Ancient technology exhibit card comparing one material, one use, and one social effect.",
-        standards: ["ancient/classical civilizations", "matter and properties", "technology impacts", "WHST explanation"]
+        courses: ["Grade 6 Ancient Civilizations", "Physical Science", "Chemistry"],
+        product: "Ancient technology exhibit card comparing one material, one use, and one social effect."
       },
       {
         title: "Medieval Trade Routes, Plague, and Public Health",
+        short: "Disease, trade, cities, and public response.",
         image: "assets/web/germ-theory.jpg",
         pitch: "Connect trade networks, cities, plague, and public health without turning disease into trivia.",
         historySide: "Silk Road, medieval cities, Afro-Eurasian trade, population change, labor, religion, and government response.",
         scienceSide: "Disease transmission, vectors, population density, sanitation, immunity, and evidence limits before germ theory.",
         pairedLesson: "History maps how people and goods moved. Biology asks how disease can move through the same networks.",
-        history: ["Grade 7 Medieval/Early Modern", "World History"],
-        science: ["Biology", "Environmental Science"],
-        modules: ["Grade 7: Medieval Europe", "Grade 7: Islamic World and Trade", "Biology: Disease and Human Systems"],
-        product: "Trade-route risk map with a written explanation of historical and biological factors.",
-        standards: ["medieval world history", "life science systems", "source comparison", "data/visual interpretation"]
+        courses: ["Grade 7 Medieval/Early Modern", "Biology", "Environmental Science"],
+        product: "Trade-route risk map with a written explanation of historical and biological factors."
       },
       {
         title: "Navigation, Astronomy, and the Scientific Revolution",
+        short: "Maps, stars, measurement, and changing models.",
         image: "assets/web/satellites-earth.jpg",
         pitch: "Use navigation, calendars, stars, maps, and observation to bridge ancient astronomy, exploration, and the Scientific Revolution.",
         historySide: "Ancient astronomy, Islamic scholarship, Renaissance navigation, exploration, mapmaking, and challenges to old authority.",
         scienceSide: "Earth-space systems, observation, models, measurement, evidence, and changing explanations.",
         pairedLesson: "History asks why better measurement changed trade and power. Science asks how evidence changes a model of the world.",
-        history: ["Grade 6 Ancient Civilizations", "Grade 7 Medieval/Early Modern", "World History"],
-        science: ["Earth Science", "Physical Science"],
-        modules: ["Grade 6: Ancient astronomy and calendars", "Grade 7: Renaissance and Scientific Revolution", "Earth Science: Earth-Sun-Moon systems"],
-        product: "Explorer/scientist field note: one observation, one tool, one historical consequence.",
-        standards: ["ancient/early modern history", "Earth and space science", "evidence and models", "RH/RST visual information"]
+        courses: ["Grade 6 Ancient Civilizations", "Grade 7 Medieval/Early Modern", "Earth Science"],
+        product: "Explorer/scientist field note: one observation, one tool, one historical consequence."
       },
       {
         title: "Energy Revolutions and Everyday Life",
+        short: "Steam, electricity, fuels, labor, and cities.",
         image: "assets/web/energy-revolutions.jpg",
         pitch: "Compare steam, electricity, fossil fuels, and renewables as turning points in work, cities, transportation, and family life.",
         historySide: "Industrialization, urbanization, labor, immigration, consumer life, and reform.",
         scienceSide: "Energy transfer, engines, electricity, fuels, efficiency, and environmental impact.",
         pairedLesson: "History asks what changed in work and cities. Science asks what each energy system made possible and what tradeoffs it created.",
-        history: ["US History 8", "US History HS", "World History"],
-        science: ["Physical Science", "Environmental Science"],
-        modules: ["US History 8-2: Industry and Corporations", "US History 8-2: New Technologies", "World History: Industrial Revolution"],
-        product: "Energy change museum panel or cause/effect timeline.",
-        standards: ["HSS industrialization", "RST/RH visual evidence", "NGSS energy systems"]
+        courses: ["Grade 8 US History", "World History", "Physical Science"],
+        product: "Energy change museum panel or cause/effect timeline."
       },
       {
         title: "Germ Theory and the Birth of Public Health",
+        short: "Microscopes, disease, sanitation, and reform.",
         image: "assets/web/germ-theory.jpg",
         pitch: "Use disease, microscopes, sanitation, and city reform to show how scientific evidence changed government responsibilities.",
         historySide: "Industrial cities, Progressive reform, public institutions, immigration, and civic responsibility.",
         scienceSide: "Microorganisms, disease transmission, water quality, sanitation, and evidence from observation.",
         pairedLesson: "Biology explains how disease spreads. History asks how cities and governments changed once people believed the evidence.",
-        history: ["World History", "US History HS", "Government/Economics"],
-        science: ["Biology", "Environmental Science"],
-        modules: ["World History: Industrial Cities", "US History: Progressive Reform", "Government: Public Policy"],
-        product: "Public health recommendation brief using a map, source, and science explainer.",
-        standards: ["RH/RST source comparison", "Life Science systems", "Policy argument writing"]
+        courses: ["World History", "US History HS", "Biology"],
+        product: "Public health recommendation brief using a map, source, and science explainer."
       },
       {
         title: "Fertilizer, Food, and the Population Boom",
+        short: "Chemistry, agriculture, food, runoff, and population.",
         image: "assets/web/fertilizer-food.jpg",
-        pitch: "The Haber-Bosch process is a perfect tradeoff case: feeding billions while changing rivers, soil, war, and global population.",
+        pitch: "The Haber-Bosch process is a strong tradeoff case: feeding billions while changing rivers, soil, war, and global population.",
         historySide: "Population growth, industrial agriculture, war production, global inequality, and food security.",
         scienceSide: "Nitrogen cycle, chemical reactions, fertilizers, ecosystems, runoff, and human impact.",
         pairedLesson: "Chemistry explains the process. History asks whether a technology that solved hunger also created new global problems.",
-        history: ["World History", "US History HS", "Government/Economics"],
-        science: ["Chemistry", "Environmental Science", "Biology"],
-        modules: ["World History: Population and Industrialization", "Chemistry: Chemical Reactions", "Environmental Science: Human Impact"],
-        product: "Benefit/cost decision memo or systems diagram.",
-        standards: ["RST data interpretation", "WHST explanatory writing", "NGSS matter and ecosystems"]
+        courses: ["World History", "Chemistry", "Environmental Science"],
+        product: "Benefit/cost decision memo or systems diagram."
       },
       {
         title: "Satellites: From Space Race to Earth Data",
+        short: "Cold War tools become weather and climate tools.",
         image: "assets/web/satellites-earth.jpg",
         pitch: "Start with Cold War competition, then follow satellites into weather forecasting, disaster response, GPS, mapping, and climate evidence.",
         historySide: "Cold War competition, government spending, technology policy, globalization, and security.",
         scienceSide: "Earth systems, remote sensing, weather patterns, climate data, and electromagnetic waves.",
         pairedLesson: "History starts with the Space Race. Earth Science follows the same tools into weather, wildfire, mapping, and climate decisions.",
-        history: ["US History HS", "World History", "Government/Economics"],
-        science: ["Earth Science", "Physical Science"],
-        modules: ["US History: Cold War", "Earth Science: Weather and Climate", "Government: Technology and Security"],
-        product: "Satellite data case study: which data should guide a public decision?",
-        standards: ["RH/RST visual information", "ESS Earth systems", "argument from evidence"]
+        courses: ["US History HS", "Earth Science", "Government"],
+        product: "Satellite data case study: which data should guide a public decision?"
       },
       {
         title: "California Water: Science, Scarcity, and Policy",
+        short: "Drought, aqueducts, farms, cities, and ecosystems.",
         image: "assets/web/california-water.jpg",
         pitch: "A local problem with real civic stakes: reservoirs, aqueducts, drought, agriculture, cities, ecosystems, and policy tradeoffs.",
         historySide: "California development, western settlement, agriculture, urban growth, and state/local policy.",
         scienceSide: "Watersheds, drought, groundwater, reservoirs, climate patterns, and ecosystem impacts.",
         pairedLesson: "History asks who gets water and why. Earth Science asks what the system can actually sustain.",
-        history: ["US History 8", "US History HS", "Government/Economics"],
-        science: ["Earth Science", "Environmental Science"],
-        modules: ["US History 8-1: California and the Southwest", "Government: State/Local Policy", "Earth Science: Water Systems"],
-        product: "Stakeholder policy recommendation or water-use tradeoff board.",
-        standards: ["RH/RST data sources", "ESS water systems", "civic argument writing"]
+        courses: ["Grade 8 US History", "Government", "Earth Science"],
+        product: "Stakeholder policy recommendation or water-use tradeoff board."
       },
       {
         title: "The Columbian Exchange as Biology Moving History",
+        short: "Crops, animals, disease, ecosystems, and empire.",
         image: "assets/web/columbian-exchange.jpg",
         pitch: "Treat crops, animals, disease, and ecosystems as historical forces, not just background details.",
         historySide: "Exploration, colonization, trade, empire, Indigenous societies, slavery, and population change.",
         scienceSide: "Ecosystems, invasive species, disease, domestication, agriculture, and biological exchange.",
         pairedLesson: "History maps the exchange. Biology explains why organisms, crops, and diseases could transform societies.",
-        history: ["US History 8", "World History"],
-        science: ["Biology", "Environmental Science"],
-        modules: ["US History 8-1: Voyages and Colonies", "World History: Global Exchange", "Biology: Ecology and Disease"],
-        product: "Exchange map with biological cause/effect annotations.",
-        standards: ["HSS exploration/exchange", "Life Science ecosystems", "RH/RST compare sources"]
+        courses: ["Grade 8 US History", "World History", "Biology"],
+        product: "Exchange map with biological cause/effect annotations."
       },
       {
         title: "AI and Automation: A New Industrial Revolution?",
+        short: "Looms, assembly lines, chips, robotics, and AI.",
         image: "assets/web/ai-automation.jpg",
         pitch: "Students compare textile machines, assembly lines, computers, robotics, and AI to decide what is truly new and what is repeating.",
         historySide: "Industrial revolutions, labor movements, productivity, inequality, culture, and regulation.",
         scienceSide: "Automation, computing, algorithms, robotics, systems design, and engineering constraints.",
         pairedLesson: "History gives earlier automation patterns. Science/technology asks what AI changes about tools, work, and decision-making.",
-        history: ["US History 8", "US History HS", "Government/Economics"],
-        science: ["Physical Science", "Engineering/Technology"],
-        modules: ["US History 8-2: New Technologies", "Economics: Labor and Productivity", "Science: Engineering Design"],
-        product: "Continuity/change comparison or future-of-work briefing.",
-        standards: ["RH/RST comparison", "argument evaluation", "engineering and technology impacts"]
+        courses: ["Grade 8 US History", "US History HS", "Engineering Design"],
+        product: "Continuity/change comparison or future-of-work briefing."
       }
     ];
 
-    const ideaGrid = document.getElementById("ideaGrid");
-    const countLabel = document.getElementById("countLabel");
+    const tabs = document.getElementById("ideaTabs");
+    const focus = document.getElementById("ideaFocus");
+    const grid = document.getElementById("ideaGrid");
+    let activeIndex = 0;
 
-    function renderIdeas() {
-      ideaGrid.innerHTML = "";
-
-      ideas.forEach((idea) => {
-        const card = document.createElement("article");
-        card.className = "card";
-        card.innerHTML = `
-          <img class="thumb" src="${idea.image}" alt="Generated visual anchor for ${idea.title}">
-          <div class="card-body">
-            <div>
-              <h3>${idea.title}</h3>
-              <div class="tags">
-                ${idea.history.map((tag) => `<span class="tag history">${tag}</span>`).join("")}
-                ${idea.science.map((tag) => `<span class="tag science">${tag}</span>`).join("")}
-              </div>
-            </div>
-            <p class="pitch">${idea.pitch}</p>
-            <div class="side-by-side">
-              <div class="side-card"><b>History side</b>${idea.historySide}</div>
-              <div class="side-card"><b>Science side</b>${idea.scienceSide}</div>
-            </div>
-            <div class="pairing">
-              <div class="mini">
-                <strong>Could fit in</strong>
-                <ul>${idea.modules.map((item) => `<li>${item}</li>`).join("")}</ul>
-              </div>
-              <div class="mini">
-                <strong>Paired lesson angle</strong>
-                <p>${idea.pairedLesson}</p>
-              </div>
-            </div>
-            <div class="mini">
-              <strong>Possible student product</strong>
-              <p>${idea.product}</p>
-            </div>
-            <div class="module-map">
-              <div class="module-step"><strong>Launch</strong>One vivid image and question.</div>
-              <div class="module-step"><strong>History</strong>Source, map, timeline, or case.</div>
-              <div class="module-step"><strong>Science</strong>Mechanism, model, data, or lab.</div>
-              <div class="module-step"><strong>Bridge</strong>Explain consequence with evidence.</div>
-            </div>
-            <div class="tags">${idea.standards.map((tag) => `<span class="tag skill">${tag}</span>`).join("")}</div>
-          </div>
-        `;
-        ideaGrid.appendChild(card);
-      });
-
-      countLabel.textContent = `${ideas.length} ideas`;
+    function tagList(items, className) {
+      return items.map((item) => `<span class="tag ${className}">${item}</span>`).join("");
     }
 
-    renderIdeas();
+    function setActive(index) {
+      activeIndex = index;
+      const idea = ideas[index];
+      focus.innerHTML = `
+        <img src="${idea.image}" alt="Generated visual anchor for ${idea.title}">
+        <div class="focus-body">
+          <div>
+            <h3>${idea.title}</h3>
+            <div class="tags">${tagList(idea.courses, "history")}</div>
+          </div>
+          <p class="pitch">${idea.pitch}</p>
+          <div class="two-col">
+            <div class="mini"><strong>History lens</strong><p>${idea.historySide}</p></div>
+            <div class="mini"><strong>Science lens</strong><p>${idea.scienceSide}</p></div>
+          </div>
+          <div class="mini"><strong>Paired lesson angle</strong><p>${idea.pairedLesson}</p></div>
+          <div class="mini"><strong>Possible student product</strong><p>${idea.product}</p></div>
+        </div>
+      `;
+
+      [...tabs.children].forEach((button, i) => button.classList.toggle("active", i === index));
+      [...grid.children].forEach((card, i) => card.classList.toggle("active", i === index));
+      focus.scrollIntoView({ block: "nearest" });
+    }
+
+    function render() {
+      ideas.forEach((idea, index) => {
+        const tab = document.createElement("button");
+        tab.className = `idea-tab${index === activeIndex ? " active" : ""}`;
+        tab.type = "button";
+        tab.textContent = idea.title;
+        tab.addEventListener("click", () => setActive(index));
+        tabs.appendChild(tab);
+
+        const card = document.createElement("button");
+        card.className = "idea-card";
+        card.type = "button";
+        card.innerHTML = `
+          <img src="${idea.image}" alt="">
+          <div class="idea-card-body">
+            <h3>${idea.title}</h3>
+            <p>${idea.short}</p>
+          </div>
+        `;
+        card.addEventListener("click", () => setActive(index));
+        grid.appendChild(card);
+      });
+      setActive(activeIndex);
+    }
+
+    render();
   </script>
 </body>
 </html>
