@@ -459,11 +459,36 @@
     }
 
     .section-toggle > .section-content {
-      padding: 0 0 4px;
+      padding: 24px 28px 28px;
       background: #fff;
       border: 1px solid var(--line);
       border-top: 0;
       border-radius: 0 0 8px 8px;
+    }
+
+    .section-toggle .section-head {
+      margin-top: 0;
+    }
+
+    .section-toggle .section-head h2 {
+      margin-top: 0;
+    }
+
+    .grade-list {
+      align-items: start;
+    }
+
+    .grade-list ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    .grade-list li {
+      margin: 0 0 8px;
+    }
+
+    .grade-list li:last-child {
+      margin-bottom: 0;
     }
 
     @media (max-width: 980px) {
@@ -492,6 +517,7 @@
       main { padding-inline: 12px; }
       .two-col,
       .flow-row { grid-template-columns: 1fr; }
+      .section-toggle > .section-content { padding: 22px; }
       .hero-copy,
       .focus-body { padding: 16px; }
     }
@@ -612,11 +638,11 @@
         <h2>Ideas By Grade Level</h2>
         <p>These are the likely best fits if we want maximum standards overlap and minimum course disruption.</p>
       </div>
-      <div class="model-grid">
-        <div class="model-card"><h3>Grade 6</h3><p>Roman concrete and roads; ancient water systems; mummification and microbes; materials that built empires. Best for ancient civilizations + physical/life/Earth science.</p></div>
-        <div class="model-card"><h3>Grade 7</h3><p>Trade routes and plague; Darwin island mystery; navigation and astronomy; volcanoes and climate disruption. Best for medieval/early modern history + life/Earth science.</p></div>
-        <div class="model-card"><h3>Grade 8</h3><p>Columbian Exchange; earthquake-safe cities; California water; Dust Bowl; energy revolutions; AI and work. Best for US history + CAST-style science reasoning.</p></div>
-        <div class="model-card"><h3>Grade 11</h3><p>Use one advanced model only if needed: satellites, Cold War science, climate data, public decision-making, and corroborating evidence across complex sources.</p></div>
+      <div class="model-grid grade-list">
+        <div class="model-card"><h3>Grade 6</h3><ul><li>Roman concrete and roads</li><li>Ancient water systems</li><li>Mummification and microbes</li><li>Materials that built empires</li><li>Best fit: ancient civilizations + physical/life/Earth science</li></ul></div>
+        <div class="model-card"><h3>Grade 7</h3><ul><li>Trade routes and plague</li><li>Darwin island mystery</li><li>Navigation and astronomy</li><li>Volcanoes and climate disruption</li><li>Best fit: medieval/early modern history + life/Earth science</li></ul></div>
+        <div class="model-card"><h3>Grade 8</h3><ul><li>Columbian Exchange</li><li>Earthquake-safe cities</li><li>California water</li><li>Dust Bowl</li><li>Energy revolutions and AI/work</li><li>Best fit: US history + CAST-style science reasoning</li></ul></div>
+        <div class="model-card"><h3>Grade 11</h3><ul><li>Satellites and Cold War science</li><li>Climate data and public decisions</li><li>Corroborating evidence across complex sources</li><li>Best fit: one advanced model only if needed</li></ul></div>
       </div>
       </div>
     </details>
