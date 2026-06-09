@@ -439,14 +439,31 @@
     }
 
     .section-toggle > summary {
-      background: #fff;
+      background: #17384f;
       border-radius: 8px;
       font-size: 1.15rem;
       padding: 13px 14px;
+      color: #fff;
+      border-left: 7px solid var(--yellow);
+    }
+
+    .section-toggle[open] > summary {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .section-toggle > summary::before {
+      background: var(--yellow);
+      color: #17384f;
+      font-weight: 900;
     }
 
     .section-toggle > .section-content {
       padding: 0 0 4px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-top: 0;
+      border-radius: 0 0 8px 8px;
     }
 
     @media (max-width: 980px) {
