@@ -1,0 +1,13 @@
+{
+  "name": "science-history-project-module-ideas",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "preview": "python -m http.server 8765 --bind 127.0.0.1",
+    "vercel:preview": "vercel",
+    "vercel:prod": "vercel --prod"
+  },
+  "devDependencies": {
+    "vercel": "^48.10.2"
+  }
+}
