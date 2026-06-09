@@ -186,21 +186,30 @@
       gap: 12px;
     }
 
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      gap: 12px;
+    }
+
     .standard-card,
-    .model-card {
+    .model-card,
+    .outcome-card {
       min-height: 150px;
       padding: 14px;
       box-shadow: 0 8px 18px rgba(38, 52, 60, 0.06);
     }
 
     .standard-card h3,
-    .model-card h3 {
+    .model-card h3,
+    .outcome-card h3 {
       margin: 0 0 7px;
       font-size: 1rem;
     }
 
     .standard-card p,
-    .model-card p {
+    .model-card p,
+    .outcome-card p {
       margin: 0;
       color: var(--muted);
       font-size: 0.94rem;
@@ -383,6 +392,7 @@
       .hero,
       .lesson-focus,
       .standard-grid,
+      .outcome-grid,
       .model-grid,
       .lesson-grid {
         grid-template-columns: 1fr;
@@ -437,10 +447,22 @@
           <span class="claim green">Claim 3: Speaking/Listening</span>
           <span class="claim yellow">Claim 4: Research</span>
         </div>
-        <p><strong>Recommendation:</strong> focus mostly on middle school testing grades, then build one 11th grade model lesson that uses higher-level sources and CAST-aligned science reasoning.</p>
+        <p><strong>Recommendation:</strong> build two integrated middle-school tutoring sessions first, then keep one 11th grade model as an optional extension if time allows.</p>
       </div>
       <div class="hero-image">
         <img src="assets/web/overview-contact-sheet.jpg" alt="Generated overview collage of science and history lesson ideas">
+      </div>
+    </section>
+
+    <section id="outcomes">
+      <div class="section-head">
+        <h2>Meeting Direction</h2>
+        <p>The planning notes point toward a practical two-session pilot.</p>
+      </div>
+      <div class="outcome-grid">
+        <div class="outcome-card"><h3>Build Two Integrated Sessions</h3><p>Middle school should be the main audience because it is the largest testing group. Each session should combine science, social studies, and SBA reading practice.</p></div>
+        <div class="outcome-card"><h3>Use One Linear Format</h3><p>Launch, source set, visual/data task, self-graded checks, and a short evidence response. Teachers should be able to use it immediately in small groups.</p></div>
+        <div class="outcome-card"><h3>Coordinate, Then Claim Topics</h3><p>Baptiste, Christine, and Katya can choose topics they care about while keeping the structure, styling, and standards alignment consistent.</p></div>
       </div>
     </section>
 
@@ -540,6 +562,18 @@
         checks: ["Central idea", "Domain vocabulary", "Integrate diagram and text", "Synthesize sources"],
         standards: ["RI/RH/RST-2", "RI/RH/RST-4", "RI/RH/RST-7", "RH/RST-9"],
         product: "Students write a field note explaining one tool, one observation, and one historical consequence."
+      },
+      {
+        title: "Galapagos and Darwin: How Do Places Change Scientific Ideas?",
+        short: "Middle school: exploration, observation, adaptation, evidence, and scientific explanation.",
+        grade: ["Grade 7/8", "Middle School"],
+        science: ["Life Science", "Adaptation", "CAST-style evidence"],
+        image: "assets/web/columbian-exchange.jpg",
+        question: "How did travel, observation, and evidence from the Galapagos help change how people explained living things?",
+        sources: ["Short historical context on Darwin's voyage", "Science text on adaptation and variation", "Map or infographic of the Galapagos Islands and species observations"],
+        checks: ["Central idea", "Evidence from observation", "Map/visual evidence", "Claim supported by two sources"],
+        standards: ["RI/RH/RST-1", "RI/RH/RST-2", "RI/RH/RST-7", "RH/RST-9"],
+        product: "Students write a short explanation of how a place and its evidence changed a scientific idea."
       },
       {
         title: "The Columbian Exchange: Biology Moving History",
