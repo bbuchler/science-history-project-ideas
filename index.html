@@ -98,10 +98,11 @@
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
     }
 
-    nav a.primary {
-      background: var(--blue);
-      border-color: var(--blue);
-      color: #fff;
+    nav a.active {
+      background: var(--yellow);
+      border-color: var(--yellow);
+      color: #17384f;
+      font-weight: 700;
     }
 
     main {
@@ -564,7 +565,7 @@
       <nav aria-label="Page sections">
         <a href="#standards">Standards</a>
         <a href="#flow">Flow</a>
-        <a class="primary" href="#lessons">Lessons</a>
+        <a href="#lessons">Lessons</a>
         <a href="#bank">Grades</a>
         <a href="#setup">Features</a>
       </nav>
@@ -944,11 +945,18 @@
       }
     }
 
+    function setActiveNav(hash) {
+      document.querySelectorAll('nav a[href^="#"]').forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === hash);
+      });
+    }
+
     function openSectionFromHash(hash) {
       if (!hash) return;
       const section = document.querySelector(hash);
       if (section && section.tagName.toLowerCase() === "details") {
         section.open = true;
+        setActiveNav(hash);
         section.scrollIntoView({ block: "start" });
       }
     }
