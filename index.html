@@ -301,9 +301,9 @@
 
     .idea-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 14px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 18px;
     }
 
     .idea-card {
@@ -311,6 +311,8 @@
       cursor: pointer;
       text-align: left;
       padding: 0;
+      display: grid;
+      grid-template-rows: auto 1fr;
     }
 
     .idea-card img {
@@ -320,18 +322,28 @@
     }
 
     .idea-card-body {
-      padding: 12px;
+      padding: 14px;
+      display: grid;
+      gap: 11px;
     }
 
     .idea-card h3 {
-      margin: 0 0 6px;
-      font-size: 1rem;
+      margin: 0;
+      font-size: 1.1rem;
     }
 
     .idea-card p {
       margin: 0;
-      color: var(--muted);
-      font-size: 0.92rem;
+      color: #40515a;
+      font-size: 0.94rem;
+    }
+
+    .card-actions {
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 0.9rem;
     }
 
     .model-grid {
@@ -460,7 +472,7 @@
     <section id="ideas">
       <div class="section-head">
         <h2>Idea Quick View</h2>
-        <p>Click an idea to switch the focus card. The small cards underneath are the quick menu.</p>
+        <p>Use the toggles for a quick walkthrough. The cards underneath keep the fuller planning detail.</p>
       </div>
       <div class="idea-tabs" id="ideaTabs" aria-label="Choose an idea"></div>
       <article class="idea-focus" id="ideaFocus"></article>
@@ -551,6 +563,7 @@
         pairedLesson: "History asks how rivers helped civilizations grow. Science asks what water systems make farming and dense cities possible.",
         courses: ["Grade 6 Ancient Civilizations", "Earth Science", "Engineering Design"],
         product: "Design brief for an ancient irrigation system with a short historical explanation."
+        , standards: ["ancient civilizations", "ESS water systems", "engineering design", "RH/RST visual evidence"]
       },
       {
         title: "Materials That Built Empires",
@@ -562,6 +575,7 @@
         pairedLesson: "History asks what materials allowed societies to do. Science asks why those materials behaved differently from what came before.",
         courses: ["Grade 6 Ancient Civilizations", "Physical Science", "Chemistry"],
         product: "Ancient technology exhibit card comparing one material, one use, and one social effect."
+        , standards: ["ancient/classical civilizations", "matter and properties", "technology impacts", "WHST explanation"]
       },
       {
         title: "Medieval Trade Routes, Plague, and Public Health",
@@ -573,6 +587,7 @@
         pairedLesson: "History maps how people and goods moved. Biology asks how disease can move through the same networks.",
         courses: ["Grade 7 Medieval/Early Modern", "Biology", "Environmental Science"],
         product: "Trade-route risk map with a written explanation of historical and biological factors."
+        , standards: ["medieval world history", "life science systems", "source comparison", "data/visual interpretation"]
       },
       {
         title: "Navigation, Astronomy, and the Scientific Revolution",
@@ -584,6 +599,7 @@
         pairedLesson: "History asks why better measurement changed trade and power. Science asks how evidence changes a model of the world.",
         courses: ["Grade 6 Ancient Civilizations", "Grade 7 Medieval/Early Modern", "Earth Science"],
         product: "Explorer/scientist field note: one observation, one tool, one historical consequence."
+        , standards: ["ancient/early modern history", "Earth and space science", "evidence and models", "RH/RST visual information"]
       },
       {
         title: "Energy Revolutions and Everyday Life",
@@ -595,6 +611,7 @@
         pairedLesson: "History asks what changed in work and cities. Science asks what each energy system made possible and what tradeoffs it created.",
         courses: ["Grade 8 US History", "World History", "Physical Science"],
         product: "Energy change museum panel or cause/effect timeline."
+        , standards: ["industrialization", "energy systems", "cause/effect", "visual evidence"]
       },
       {
         title: "Germ Theory and the Birth of Public Health",
@@ -606,6 +623,7 @@
         pairedLesson: "Biology explains how disease spreads. History asks how cities and governments changed once people believed the evidence.",
         courses: ["World History", "US History HS", "Biology"],
         product: "Public health recommendation brief using a map, source, and science explainer."
+        , standards: ["source comparison", "life science systems", "public policy", "argument writing"]
       },
       {
         title: "Fertilizer, Food, and the Population Boom",
@@ -617,6 +635,7 @@
         pairedLesson: "Chemistry explains the process. History asks whether a technology that solved hunger also created new global problems.",
         courses: ["World History", "Chemistry", "Environmental Science"],
         product: "Benefit/cost decision memo or systems diagram."
+        , standards: ["data interpretation", "chemical reactions", "ecosystems", "explanatory writing"]
       },
       {
         title: "Satellites: From Space Race to Earth Data",
@@ -628,6 +647,7 @@
         pairedLesson: "History starts with the Space Race. Earth Science follows the same tools into weather, wildfire, mapping, and climate decisions.",
         courses: ["US History HS", "Earth Science", "Government"],
         product: "Satellite data case study: which data should guide a public decision?"
+        , standards: ["Cold War science", "Earth systems", "visual/data evidence", "argument from evidence"]
       },
       {
         title: "California Water: Science, Scarcity, and Policy",
@@ -639,6 +659,7 @@
         pairedLesson: "History asks who gets water and why. Earth Science asks what the system can actually sustain.",
         courses: ["Grade 8 US History", "Government", "Earth Science"],
         product: "Stakeholder policy recommendation or water-use tradeoff board."
+        , standards: ["California history", "water systems", "civic argument", "data sources"]
       },
       {
         title: "The Columbian Exchange as Biology Moving History",
@@ -650,6 +671,7 @@
         pairedLesson: "History maps the exchange. Biology explains why organisms, crops, and diseases could transform societies.",
         courses: ["Grade 8 US History", "World History", "Biology"],
         product: "Exchange map with biological cause/effect annotations."
+        , standards: ["exploration/exchange", "ecosystems", "disease", "compare sources"]
       },
       {
         title: "AI and Automation: A New Industrial Revolution?",
@@ -661,6 +683,7 @@
         pairedLesson: "History gives earlier automation patterns. Science/technology asks what AI changes about tools, work, and decision-making.",
         courses: ["Grade 8 US History", "US History HS", "Engineering Design"],
         product: "Continuity/change comparison or future-of-work briefing."
+        , standards: ["industrialization", "engineering design", "comparison", "argument evaluation"]
       }
     ];
 
@@ -713,8 +736,19 @@
         card.innerHTML = `
           <img src="${idea.image}" alt="">
           <div class="idea-card-body">
-            <h3>${idea.title}</h3>
-            <p>${idea.short}</p>
+            <div>
+              <h3>${idea.title}</h3>
+              <div class="tags">${tagList(idea.courses, "history")}</div>
+            </div>
+            <p>${idea.pitch}</p>
+            <div class="two-col">
+              <div class="mini"><strong>History lens</strong><p>${idea.historySide}</p></div>
+              <div class="mini"><strong>Science lens</strong><p>${idea.scienceSide}</p></div>
+            </div>
+            <div class="mini"><strong>Paired lesson angle</strong><p>${idea.pairedLesson}</p></div>
+            <div class="mini"><strong>Possible student product</strong><p>${idea.product}</p></div>
+            <div class="tags">${tagList(idea.standards || [], "skill")}</div>
+            <div class="card-actions">Open in quick view</div>
           </div>
         `;
         card.addEventListener("click", () => setActive(index));
