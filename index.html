@@ -45,22 +45,30 @@
     .top-inner {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 13px 18px;
+      padding: 12px 18px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 16px;
+      align-items: flex-start;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .top-inner > div:first-child {
+      flex: 1 1 390px;
+      min-width: 280px;
     }
 
     h1, h2, h3 { letter-spacing: 0; }
 
     h1 {
       margin: 0;
-      font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+      font-size: 1.55rem;
+      line-height: 1.16;
+      max-width: 440px;
     }
 
     .subtitle {
-      margin: 2px 0 0;
+      margin: 3px 0 0;
       color: var(--muted);
       font-size: 0.95rem;
     }
@@ -70,6 +78,7 @@
       flex-wrap: wrap;
       justify-content: flex-end;
       gap: 8px;
+      flex: 1 1 620px;
     }
 
     nav a {
@@ -78,10 +87,13 @@
       border: 1px solid var(--line);
       border-radius: 6px;
       background: #fff;
-      padding: 8px 10px;
-      min-height: 38px;
+      padding: 8px 12px;
+      min-height: 40px;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      box-shadow: 0 3px 10px rgba(38, 52, 60, 0.04);
     }
 
     nav a.primary {
@@ -504,10 +516,15 @@
 
       .top-inner {
         align-items: start;
-        flex-direction: column;
       }
 
-      nav { justify-content: start; }
+      h1 { max-width: none; }
+
+      nav {
+        justify-content: start;
+        flex: 1 1 auto;
+        width: 100%;
+      }
 
       .hero-image img,
       .lesson-focus img { min-height: auto; }
@@ -515,6 +532,15 @@
 
     @media (max-width: 680px) {
       main { padding-inline: 12px; }
+      .top-inner { padding: 9px 12px; }
+      h1 { font-size: 1.35rem; }
+      .subtitle { font-size: 0.9rem; }
+      nav { gap: 6px; }
+      nav a {
+        min-height: 34px;
+        padding: 6px 9px;
+        font-size: 0.9rem;
+      }
       .two-col,
       .flow-row { grid-template-columns: 1fr; }
       .section-toggle > .section-content { padding: 22px; }
@@ -560,7 +586,7 @@
       </div>
     </section>
 
-    <details id="outcomes" class="section-toggle" open>
+    <details id="outcomes" class="section-toggle">
       <summary>Suggested Approach</summary>
       <div class="section-content">
       <div class="section-head">
@@ -575,14 +601,14 @@
       </div>
     </details>
 
-    <details id="standards" class="section-toggle" open>
+    <details id="standards" class="section-toggle">
       <summary>Anchor Standards For Tutoring Sessions</summary>
       <div class="section-content">
       <div class="section-head">
         <h2>Anchor Standards For Tutoring Sessions</h2>
         <p>These are the highest-value reading and writing standards to build around because they overlap across ELA, history/social science, and science/technical reading.</p>
       </div>
-      <details open>
+      <details>
         <summary>Show / hide anchor standards</summary>
         <div class="detail-body">
           <div class="standard-grid">
@@ -600,7 +626,7 @@
       </div>
     </details>
 
-    <details id="flow" class="section-toggle" open>
+    <details id="flow" class="section-toggle">
       <summary>Reusable One-Hour Flow</summary>
       <div class="section-content">
       <div class="section-head">
@@ -618,7 +644,7 @@
       </div>
     </details>
 
-    <details id="lessons" class="section-toggle lesson-section" open>
+    <details id="lessons" class="section-toggle lesson-section">
       <summary>One-Hour Lesson Ideas</summary>
       <div class="section-content">
       <div class="section-head">
@@ -882,7 +908,7 @@
       return `<ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
     }
 
-    function setActive(index) {
+    function setActive(index, shouldScroll = true) {
       activeIndex = index;
       const lesson = lessons[index];
       focus.innerHTML = `
@@ -908,7 +934,18 @@
         </div>
       `;
       [...tabs.children].forEach((button, i) => button.classList.toggle("active", i === index));
-      focus.scrollIntoView({ block: "nearest" });
+      if (shouldScroll) {
+        focus.scrollIntoView({ block: "nearest" });
+      }
+    }
+
+    function openSectionFromHash(hash) {
+      if (!hash) return;
+      const section = document.querySelector(hash);
+      if (section && section.tagName.toLowerCase() === "details") {
+        section.open = true;
+        section.scrollIntoView({ block: "start" });
+      }
     }
 
     function render() {
@@ -947,10 +984,18 @@
         `;
         grid.appendChild(card);
       });
-      setActive(activeIndex);
+      setActive(activeIndex, false);
     }
 
     render();
+
+    document.querySelectorAll('nav a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", () => {
+        openSectionFromHash(link.getAttribute("href"));
+      });
+    });
+
+    openSectionFromHash(window.location.hash);
   </script>
 </body>
 </html>
