@@ -357,6 +357,11 @@
       font-size: 0.94rem;
     }
 
+    .priority-box {
+      border-left: 4px solid var(--blue);
+      background: #f8fbfe;
+    }
+
     .flow {
       background: #fff;
       border: 1px solid var(--line);
@@ -439,7 +444,7 @@
       <div class="hero-copy">
         <div>
           <h2>Start with strange-but-true stories. Use them to practice state-test reading skills.</h2>
-          <p>These are standalone, teacher-led small-group lessons built around weird, wild, hard-to-believe science/history hooks. Each lesson uses a short history source, a science/technical source, a visual or data source, and quick self-graded checks on one webpage.</p>
+          <p>This is a living brainstorming board, not a finished curriculum map. The strongest ideas are weird, wild, or hard to believe, but still simple enough to teach in one hour with a source set, video or infographic, quick interactive, and evidence response.</p>
         </div>
         <div class="claim-row">
           <span class="claim blue">Claim 1: Reading</span>
@@ -462,7 +467,7 @@
       <div class="outcome-grid">
         <div class="outcome-card"><h3>Build Two Integrated Sessions</h3><p>Middle school should be the main audience because it is the largest testing group. Each session should feel like a strange-but-true story, not a test-prep worksheet.</p></div>
         <div class="outcome-card"><h3>Use One Linear Format</h3><p>Hook, video or infographic, leveled reading, interactive task, self-graded checks, and a short evidence response. Teachers should be able to use it immediately in small groups.</p></div>
-        <div class="outcome-card"><h3>Coordinate, Then Claim Topics</h3><p>Baptiste, Christine, and Katya can choose hooks they care about while keeping the structure, styling, and standards alignment consistent.</p></div>
+        <div class="outcome-card"><h3>Pick The Strongest Hooks</h3><p>Good candidates need three things: a memorable story, a clear science mechanism, and an easy source task that practices RI/RH/RST reading standards.</p></div>
       </div>
     </section>
 
@@ -537,7 +542,8 @@
         sources: ["Short history source on Roman roads, harbors, or aqueducts", "Science text on volcanic ash, lime, seawater, and concrete durability", "Diagram or infographic comparing ancient and modern concrete"],
         checks: ["Central idea", "Technical vocabulary", "Cause/effect from chemistry to infrastructure", "Evidence-based design choice"],
         standards: ["RI/RH/RST-1", "RI/RH/RST-2", "RI/RH/RST-3", "RI/RH/RST-7", "RST-8"],
-        product: "Students design a concrete mix or structure choice and explain the tradeoff using evidence."
+        product: "Students design a concrete mix or structure choice and explain the tradeoff using evidence.",
+        priority: "Reading: cite evidence and integrate a technical diagram with a history source. Writing: short explanatory CER using two sources."
       },
       {
         title: "Ancient Water Systems: Can Engineering Build a Civilization?",
@@ -549,7 +555,8 @@
         sources: ["Short history text on Mesopotamia or Egypt", "Irrigation diagram or watershed map", "Technical explanation of flooding, canals, and soil"],
         checks: ["Central idea", "Evidence from map/text", "Cause/effect chain", "Short CER"],
         standards: ["RI/RH/RST-1", "RI/RH/RST-2", "RI/RH/RST-3", "RI/RH/RST-7"],
-        product: "Students write a short engineering recommendation for an ancient city."
+        product: "Students write a short engineering recommendation for an ancient city.",
+        priority: "Reading: determine central idea and trace a cause/effect process. Writing: evidence-based recommendation."
       },
       {
         title: "Trade Routes and Plague: How Do Networks Move More Than Goods?",
@@ -561,7 +568,8 @@
         sources: ["Map of Afro-Eurasian trade routes", "Medieval account or secondary source on plague", "Science text on transmission, vectors, and population density"],
         checks: ["Source purpose", "Vocabulary in context", "Map evidence", "Claim evaluation"],
         standards: ["RH/RST-1", "RH/RST-2", "RH/RST-6", "RH/RST-7", "RH/RST-8"],
-        product: "Students create a risk explanation using evidence from both the map and science source."
+        product: "Students create a risk explanation using evidence from both the map and science source.",
+        priority: "Reading: integrate map evidence with two texts and evaluate claims. Writing: short causal explanation."
       },
       {
         title: "Navigation and Astronomy: When Better Models Changed the World",
@@ -573,19 +581,21 @@
         sources: ["Historical source on navigation or mapmaking", "Diagram of Earth-sun-star observations", "Short video or infographic on using evidence to revise a model"],
         checks: ["Central idea", "Domain vocabulary", "Integrate diagram and text", "Synthesize sources"],
         standards: ["RI/RH/RST-2", "RI/RH/RST-4", "RI/RH/RST-7", "RH/RST-9"],
-        product: "Students write a field note explaining one tool, one observation, and one historical consequence."
+        product: "Students write a field note explaining one tool, one observation, and one historical consequence.",
+        priority: "Reading: synthesize model, diagram, and historical source. Writing: concise explanatory summary."
       },
       {
-        title: "Galapagos and Darwin: How Do Places Change Scientific Ideas?",
-        short: "Middle school: exploration, observation, adaptation, evidence, and scientific explanation.",
+        title: "The Island Mystery: What Were These Animals Trying To Tell Darwin?",
+        short: "Middle school: weird island animals, clues, adaptation, evidence, and scientific explanation.",
         grade: ["Grade 7/8", "Middle School"],
         science: ["Life Science", "Adaptation", "CAST-style evidence"],
         image: "assets/web/columbian-exchange.jpg",
-        question: "How did travel, observation, and evidence from the Galapagos help change how people explained living things?",
-        sources: ["Short historical context on Darwin's voyage", "Science text on adaptation and variation", "Map or infographic of the Galapagos Islands and species observations"],
-        checks: ["Central idea", "Evidence from observation", "Map/visual evidence", "Claim supported by two sources"],
+        question: "How did a chain of strange island clues help Darwin rethink how living things change over time?",
+        sources: ["Short story-style history source on Darwin arriving at the Galapagos", "Science text on variation, adaptation, and natural selection", "Clickable island clue map with finches, tortoises, iguanas, and habitat differences"],
+        checks: ["Match animal clue to environment", "Central idea from a science explanation", "Map/visual evidence", "Claim supported by two sources"],
         standards: ["RI/RH/RST-1", "RI/RH/RST-2", "RI/RH/RST-7", "RH/RST-9"],
-        product: "Students write a short explanation of how a place and its evidence changed a scientific idea."
+        product: "Students solve the island mystery: choose the strongest animal clue and explain how it supports the idea of adaptation.",
+        priority: "Reading: cite specific evidence from visual clues and science text. Writing: claim-evidence-reasoning paragraph."
       },
       {
         title: "The Columbian Exchange: Biology Moving History",
@@ -597,7 +607,8 @@
         sources: ["History text on the Columbian Exchange", "Map or infographic of crop/animal/disease movement", "Science text on ecosystems, disease, or invasive species"],
         checks: ["Evidence selection", "Cause/effect", "Visual source interpretation", "Two-source CER"],
         standards: ["RI/RH/RST-1", "RI/RH/RST-3", "RI/RH/RST-7", "RH/RST-9"],
-        product: "Students explain one biological exchange and one historical consequence."
+        product: "Students explain one biological exchange and one historical consequence.",
+        priority: "Reading: connect history source, map/infographic, and science explanation. Writing: two-source explanatory response."
       },
       {
         title: "Earthquake-Safe Cities: What Evidence Should Shape Building Rules?",
@@ -609,7 +620,8 @@
         sources: ["Fault or shake-risk map", "Brief history of a major California earthquake", "Technical text on building design or seismic waves"],
         checks: ["Read a map", "Follow technical explanation", "Evaluate policy claim", "CER exit"],
         standards: ["RH/RST-1", "RST-3", "RH/RST-7", "RH/RST-8"],
-        product: "Students recommend one building rule and cite two pieces of evidence."
+        product: "Students recommend one building rule and cite two pieces of evidence.",
+        priority: "Reading: follow technical explanation and evaluate evidence. Writing: policy claim with evidence."
       },
       {
         title: "California Water: Who Gets Water, and What Can the System Sustain?",
@@ -621,7 +633,8 @@
         sources: ["Short history source on California growth or agriculture", "Reservoir/drought graph", "Science text on watersheds or groundwater"],
         checks: ["Graph trend", "Stakeholder evidence", "Claim vs evidence", "Short recommendation"],
         standards: ["RI/RH/RST-1", "RI/RH/RST-2", "RH/RST-7", "RH/RST-8"],
-        product: "Students write a short water-use recommendation for one stakeholder group."
+        product: "Students write a short water-use recommendation for one stakeholder group.",
+        priority: "Reading: interpret graph trends and compare stakeholder claims. Writing: recommendation using text and data."
       },
       {
         title: "Energy Revolutions: What Changed When Work Got Powered?",
@@ -633,7 +646,8 @@
         sources: ["History source on factories or urbanization", "Energy transfer diagram or short technical text", "Image/data source on city growth, fuel, or labor"],
         checks: ["Central idea", "Sequence/cause-effect", "Technical vocabulary", "Evidence paragraph"],
         standards: ["RI/RH/RST-2", "RI/RH/RST-3", "RI/RH/RST-4", "RI/RH/RST-7"],
-        product: "Students explain one energy change and one social consequence."
+        product: "Students explain one energy change and one social consequence.",
+        priority: "Reading: track sequence and cause/effect across sources. Writing: explanatory paragraph."
       },
       {
         title: "AI, Luddites, and the Future of Work: What Happens When Tools Change Identity?",
@@ -645,7 +659,8 @@
         sources: ["Short history source on Luddites and mechanized textile work", "Source or infographic on factory time, labor, or industrial work identity", "Accessible science/technical text on AI systems and automation"],
         checks: ["Compare historical and modern claims", "Author purpose", "Evidence that supports or challenges a claim", "Continuity/change reasoning"],
         standards: ["RI/RH/RST-1", "RI/RH/RST-3", "RH/RST-6", "RH/RST-8", "RH/RST-9"],
-        product: "Students write a future-of-work claim: what changes, what repeats, and what evidence supports it?"
+        product: "Students write a future-of-work claim: what changes, what repeats, and what evidence supports it?",
+        priority: "Reading: compare claims and point of view across time. Writing: argument claim with historical and technical evidence."
       },
       {
         title: "Grade 11 Model: Satellites, Cold War Science, and Climate Data",
@@ -657,7 +672,8 @@
         sources: ["Historical source on the Space Race", "Satellite image/data set on weather, wildfire, or climate", "Science/technical text on remote sensing"],
         checks: ["Author purpose", "Data interpretation", "Corroborate conclusion", "Synthesize three sources"],
         standards: ["RH/RST-1", "RH/RST-6", "RH/RST-7", "RH/RST-8", "RH/RST-9"],
-        product: "Students write a claim about how satellite evidence should guide a public decision."
+        product: "Students write a claim about how satellite evidence should guide a public decision.",
+        priority: "Reading: corroborate data, technical text, and historical context. Writing: evidence-based argument."
       }
     ];
 
@@ -689,6 +705,7 @@
             <div class="mini"><strong>Source set</strong>${list(lesson.sources)}</div>
             <div class="mini"><strong>Self-graded checks</strong>${list(lesson.checks)}</div>
           </div>
+          <div class="mini priority-box"><strong>Priority ELA move</strong><p>${lesson.priority}</p></div>
           <div class="mini"><strong>Student product</strong><p>${lesson.product}</p></div>
           <div class="tags">${tags(lesson.standards, "standard")}</div>
         </div>
@@ -721,6 +738,7 @@
               <div class="mini"><strong>Source set</strong>${list(lesson.sources)}</div>
               <div class="mini"><strong>Checks</strong>${list(lesson.checks)}</div>
             </div>
+            <div class="mini priority-box"><strong>Priority ELA move</strong><p>${lesson.priority}</p></div>
             <div class="mini"><strong>Student product</strong><p>${lesson.product}</p></div>
             <div class="tags">${tags(lesson.standards, "standard")}</div>
           </div>
